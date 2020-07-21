@@ -82,7 +82,7 @@ public class SwiftFlutterEmailSenderPlugin: NSObject, FlutterPlugin {
                         }
             let activityViewController = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
             activityViewController.popoverPresentationController?.sourceView = viewController.view
-            g
+
 
             if #available(iOS 9, *) {
                 activityViewController.excludedActivityTypes?.append(    UIActivity.ActivityType.openInIBooks)

@@ -52,7 +52,12 @@ class _MyAppState extends State<MyApp> {
       content: Text(platformResponse),
     ));
   }
-
+  @override
+  void initState() {
+    // TODO: implement initState
+    print("start");
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

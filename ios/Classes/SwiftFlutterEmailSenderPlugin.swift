@@ -91,7 +91,6 @@ public class SwiftFlutterEmailSenderPlugin: NSObject, FlutterPlugin {
             UIActivity.ActivityType(rawValue: "com.apple.mobilenotes.SharingExtension"),
             UIActivity.ActivityType(rawValue: "com.google.Drive.ShareExtension")
             ]
-
             if #available(iOS 9, *) {
                 activityViewController.excludedActivityTypes?.append(    UIActivity.ActivityType.openInIBooks)
             }

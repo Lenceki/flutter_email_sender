@@ -82,6 +82,7 @@ public class SwiftFlutterEmailSenderPlugin: NSObject, FlutterPlugin {
                         }
             let activityViewController = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
             activityViewController.popoverPresentationController?.sourceView = viewController.view
+
             activityViewController.excludedActivityTypes = [ UIActivity.ActivityType.assignToContact,
             UIActivity.ActivityType.print,
             UIActivity.ActivityType.addToReadingList,

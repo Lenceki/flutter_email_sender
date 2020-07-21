@@ -83,6 +83,7 @@ public class SwiftFlutterEmailSenderPlugin: NSObject, FlutterPlugin {
             let activityViewController = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
             activityViewController.popoverPresentationController?.sourceView = viewController.view
 
+<<<<<<< HEAD
             activityViewController.excludedActivityTypes = [ UIActivity.ActivityType.assignToContact,
             UIActivity.ActivityType.print,
             UIActivity.ActivityType.addToReadingList,
@@ -95,6 +96,8 @@ public class SwiftFlutterEmailSenderPlugin: NSObject, FlutterPlugin {
                 activityViewController.excludedActivityTypes?.append(    UIActivity.ActivityType.openInIBooks)
             }
 
+=======
+>>>>>>> Version up
             if let subject = email.subject {
                 activityViewController.setValue(subject, forKey: "Subject")
              }

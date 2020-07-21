@@ -82,15 +82,7 @@ public class SwiftFlutterEmailSenderPlugin: NSObject, FlutterPlugin {
                         }
             let activityViewController = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
             activityViewController.popoverPresentationController?.sourceView = viewController.view
-            activityViewController.excludedActivityTypes = [ UIActivity.ActivityType.assignToContact,
-            UIActivity.ActivityType.print,
-            UIActivity.ActivityType.addToReadingList,
-            UIActivity.ActivityType.saveToCameraRoll,
-
-            UIActivity.ActivityType(rawValue: "com.apple.reminders.RemindersEditorExtension"),
-            UIActivity.ActivityType(rawValue: "com.apple.mobilenotes.SharingExtension"),
-            UIActivity.ActivityType(rawValue: "com.google.Drive.ShareExtension")
-            ]
+            g
 
             if #available(iOS 9, *) {
                 activityViewController.excludedActivityTypes?.append(    UIActivity.ActivityType.openInIBooks)

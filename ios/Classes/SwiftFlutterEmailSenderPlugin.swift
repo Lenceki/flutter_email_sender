@@ -16,7 +16,7 @@ public class SwiftFlutterEmailSenderPlugin: NSObject, FlutterPlugin {
         case "send":
             sendMail(call, result: result)
         default:
-            result(FlutterMethodNplemented)
+            result(FlutterMethodNotImplemented)
         }
     }
 

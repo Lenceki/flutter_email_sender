@@ -16,7 +16,7 @@ public class SwiftFlutterEmailSenderPlugin: NSObject, FlutterPlugin {
         case "send":
             sendMail(call, result: result)
         default:
-            result(FlutterMethodNotImplemented)
+            result(FlutterMethodNplemented)
         }
     }
 
@@ -66,7 +66,7 @@ public class SwiftFlutterEmailSenderPlugin: NSObject, FlutterPlugin {
             var activityItems: [Any] = [];
 
             if let recipients = email.recipients {
-                activityItems += recipients.map { NSURL(string: "mailto:\($0)")};
+                activityItems += recipients.map { "Please Send it to: \($0)\n"};
             }
 
             if let body = email.body {
@@ -86,7 +86,6 @@ public class SwiftFlutterEmailSenderPlugin: NSObject, FlutterPlugin {
             UIActivity.ActivityType.print,
             UIActivity.ActivityType.addToReadingList,
             UIActivity.ActivityType.saveToCameraRoll,
-
             UIActivity.ActivityType(rawValue: "com.apple.reminders.RemindersEditorExtension"),
             UIActivity.ActivityType(rawValue: "com.apple.mobilenotes.SharingExtension"),
             UIActivity.ActivityType(rawValue: "com.google.Drive.ShareExtension")
